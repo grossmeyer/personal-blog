@@ -7,24 +7,10 @@ module.exports = {
       padding: '2rem',
     },
     extend: {
-      colors: {
-        lightBg: {
-          DEFAULT: '#FBE8A6'
-        },
-        darkBg: {
-          DEFAULT: '#F4976C'
-        },
-        darkAccent: {
-          DEFAULT: '#303C6C'
-        },
-        lightAccent: {
-          DEFAULT: '#B4DFE5',
-          lighter: '#D2FDFF'
-        },
-      },
       fontFamily: {
-        'heading': 'Rosario, Arial, sans-serif',
-        'typeface': '"Crimson Text", serif',
+        'header': 'Rosario, Arial, sans-serif',
+        'callout': 'Prompt, Arial, sans-serif',
+        'typeface': 'Nunito, serif',
         'code': '"Overpass Mono", ui-monospace',
       },
     },

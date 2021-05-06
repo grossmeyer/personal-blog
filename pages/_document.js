@@ -11,9 +11,9 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Overpass+Mono&family=Rosario&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Overpass+Mono&family=Rosario&family=Prompt&display=swap" rel="stylesheet" />
         </Head>
-        <body className='bg-darkBg'>
+        <body className='bg-yellow-100'>
           <Main />
           <NextScript />
         </body>
