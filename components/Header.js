@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 
 export default function Header({ title = 'GlennMeyer.DEV' }) {
   return (
-    <header className="flex flex-wrap flex-row justify-between items-center md:space-x-4 py-4 px-6 relative">
+    <header className="flex flex-wrap flex-row justify-between items-center md:space-x-4 py-4 px-2 md:px-6 relative">
       <Head>
         <title>{title}</title>
         <link rel="icon" href="favicon.ico" />

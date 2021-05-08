@@ -7,11 +7,11 @@ export default function HeroLayout() {
   return (
     <>
       <Header title='GlennMeyer.DEV Homepage' />
-      <main>
+      <main className='flex flex-col h-screen'>
         <Hero />
         <CardSection />
+        <Footer />
       </main>
-      <Footer />
     </>
   )
 }

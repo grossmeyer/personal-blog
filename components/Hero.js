@@ -2,28 +2,28 @@ import HeroCol from './HeroCol'
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-b from-yellow-100 via-yellow-500 to-yellow-100 py-6 md:py-12 mb-6 md:mb-12">
-      <div className="container px-4 mx-auto">
+    <section className='py-6 md:py-12 mb-6 md:mb-12'>
+      <div className='container px-4 mx-auto'>
 
-        <div className="text-center max-w-2xl mx-auto">
-          <h1 className="text-3xl md:text-5xl font-callout mb-2 text-gray-700">I want <span className='underline italic font-typeface text-blue-600'>you</span> to be a <br />Web Developer</h1>
-          <button className="bg-blue-600 text-blue-50 hover:bg-blue-50 hover:text-blue-600 py-2 px-6 rounded-full text-xl mt-6 font-callout">Let's do it!</button>
+        <div className='text-center max-w-2xl mx-auto'>
+          <h1 className='text-3xl md:text-5xl font-callout mb-2 text-gray-700'>I want <span className='underline italic font-typeface text-blue-600'>you</span> to be a <br />Web Developer</h1>
+          <button className='bg-blue-600 text-blue-50 hover:bg-blue-200 hover:text-blue-700 py-2 px-6 rounded-full text-xl mt-6 font-callout'>Let's do it!</button>
         </div>
 
-        <div className="md:flex md:flex-wrap md:mx-4 mt-6 md:mt-12">
+        <div className='md:flex md:flex-wrap md:mx-4 mt-6 md:mt-12'>
           <HeroCol
-          header='HTML'
-          text='The building blocks of the internet, understanding HTML thoroughly is critically important'
+            header='HTML'
+            text='The building blocks of the internet, understanding HTML thoroughly is critically important'
           />
 
           <HeroCol
-          header='CSS'
-          text='Unless you want your design to look like 1995, knowing how to use CSS to craft your distinct style is key'
+            header='CSS'
+            text='Unless you want your design to look like 1995, knowing how to use CSS to craft your distinct style is key'
           />
 
           <HeroCol
-          header='JavaScript'
-          text='Dynamic content brings your creation to life and JavaScript is the "secret formula" to enable it'
+            header='JavaScript'
+            text='Dynamic content brings your creation to life and JavaScript is the "secret formula" to enable it'
           />
         </div>
       </div>
