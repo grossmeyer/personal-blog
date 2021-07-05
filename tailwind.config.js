@@ -20,5 +20,5 @@ module.exports = {
       // boxSizing: ['hover', 'focus',], PLAY WITH THIS
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }

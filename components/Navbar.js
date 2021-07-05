@@ -16,10 +16,10 @@ export default function Navbar() {
         </svg>
       </button>
       <nav className={`${mobileMenuOpen ? 'flex' : 'hidden'} absolute lg:relative top-16 left-0 lg:top-0 z-20 lg:flex flex-col lg:flex-row lg:space-x-6 font-heading w-11/12 lg:w-auto bg-yellow-100 p-2 m-4 rounded-xl`}>
-        <a href='#' className='text-yellow-600 text-2xl font-typeface text-center hover:bg-yellow-300 hover:shadow-lg rounded-lg p-1'>Home</a>
-        <a href='#' className='text-yellow-600 text-2xl font-typeface text-center hover:bg-yellow-300 hover:shadow-lg rounded-lg p-1'>Blog</a>
-        <a href='#' className='text-yellow-600 text-2xl font-typeface text-center hover:bg-yellow-300 hover:shadow-lg rounded-lg p-1'>Tutorials</a>
-        <a href='#' className='text-yellow-600 text-2xl font-typeface text-center hover:bg-yellow-300 hover:shadow-lg rounded-lg p-1'>About</a>
+        <a href='/' className='text-yellow-600 text-2xl font-typeface text-center hover:bg-yellow-300 hover:shadow-lg rounded-lg p-1 no-underline'>Home</a>
+        <a href='/' className='text-yellow-600 text-2xl font-typeface text-center hover:bg-yellow-300 hover:shadow-lg rounded-lg p-1 no-underline'>Blog</a>
+        <a href='/' className='text-yellow-600 text-2xl font-typeface text-center hover:bg-yellow-300 hover:shadow-lg rounded-lg p-1 no-underline'>Tutorials</a>
+        <a href='/' className='text-yellow-600 text-2xl font-typeface text-center hover:bg-yellow-300 hover:shadow-lg rounded-lg p-1 no-underline'>About</a>
       </nav>
     </>
   )
