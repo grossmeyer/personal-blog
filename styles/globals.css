@@ -4,7 +4,10 @@
 
 @layer base {
   a {
-    @apply underline;
-    @apply text-blue-800;
+    @apply no-underline;
+    @apply text-synthblue-200;
+  }
+  h2 {
+    @apply text-synthpink-400;
   }
 }

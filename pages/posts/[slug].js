@@ -38,10 +38,10 @@ const Post = props => {
             height={240}
           />
         </div>
-        <h2 className='text-3xl md:text-5xl font-code mb-2 text-gray-700 text-center'>{title}</h2>
+        <h2 className='text-3xl md:text-5xl font-code mb-2 text-synthpurple-100 text-center'>{title}</h2>
         <header className='flex flex-col justify-center items-center'>
           <section className='flex justify-center items-center'>
-            <p className='p-2 text-xl font-code text-gray-600'>Written by {author}
+            <p className='p-2 text-xl font-code text-synthblue-200'>Written by {author}
             </p>
             <Image
               src={urlFor(authorImage).url()}
@@ -54,13 +54,14 @@ const Post = props => {
             {categories.map(category =>
               <a
                 key={category}
-                className='rounded-2xl shadow-lg bg-yellow-300 text-gray-800 hover:bg-yellow-200 p-2 m-2 mb-4 font-callout uppercase no-underline'
+                href='#'
+                className='rounded-2xl shadow-lg bg-synthgreen-500 text-synthgrape-900 hover:bg-synthgreen-200 p-2 m-2 mb-4 font-callout uppercase no-underline'
               >{category}
               </a>
             )}
           </section>
         </header>
-        <main className='prose-sm xl:prose-xl font-typeface'>
+        <main className='prose-sm xl:prose-xl font-typeface text-synthgrape-50'>
           <BlockContent
             blocks={body} serializers={serializers}
           />

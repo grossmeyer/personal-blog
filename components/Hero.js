@@ -6,8 +6,8 @@ export default function Hero() {
       <div className='container px-4 mx-auto'>
 
         <div className='text-center max-w-2xl mx-auto'>
-          <h1 className='text-3xl md:text-5xl font-callout mb-2 text-gray-700'>I want <span className='underline italic font-typeface text-blue-600'>you</span> to be a <br />Web Developer</h1>
-          <button className='bg-blue-600 text-blue-50 hover:bg-blue-200 hover:text-blue-700 py-2 px-6 rounded-full text-xl mt-6 font-callout'>Let's do it!</button>
+          <h1 className='text-3xl md:text-5xl font-callout mb-2 text-synthpink-100'>I want <span className='underline italic font-typeface text-synthblue-500'>you</span> to be a <br />Web Developer</h1>
+          <button className='bg-synthgreen-600 text-synthgreen-50 hover:bg-synthgreen-200 hover:text-synthgreen-700 py-2 px-6 rounded-full text-xl mt-6 font-callout'>Let's do it!</button>
         </div>
 
         <div className='md:flex md:flex-wrap md:mx-4 mt-6 md:mt-12'>

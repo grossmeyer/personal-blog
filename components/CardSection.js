@@ -3,7 +3,7 @@ import Card from './Card'
 export default function CardSection({ posts }) {
   return (
     <section className='pb-2 md:pb-4 mb-auto flex-grow'>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-1'>
+      <div className='grid grid-cols-1 gap-6 md:gap-1'>
         {posts.map(({ title, slug }, index) => {
           return (
             <Card
