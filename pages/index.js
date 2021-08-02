@@ -1,22 +1,17 @@
 import sanityClient from '../client'
-import HeroLayout from '../components/layouts/HeroLayout'
+import MainLayout from '../components/layouts/MainLayout'
 
 export default function Home({ posts }) {
-  return (
-    <HeroLayout posts={posts} />
-  )
+  return <MainLayout posts={posts} />
 }
 
 export const getServerSideProps = async () => {
   const apiResult = await sanityClient.fetch(`*[_type == "post"]{
     title,
     slug,
-    mainImage{
-      asset->{
-        _id,
-        url
-      }
-    },
+    'categories': categories[]->title,
+    previewText,
+    publishedAt,
   }`)
 
   if (!apiResult || !apiResult.length) {
@@ -28,8 +23,8 @@ export const getServerSideProps = async () => {
   } else {
     return {
       props: {
-        posts: apiResult
-      }
+        posts: apiResult,
+      },
     }
   }
 }

@@ -7,6 +7,9 @@ module.exports = {
       padding: '2rem',
     },
     extend: {
+      backgroundImage: () => ({
+        'main-bg': "url('/public/images/peaks_bg.svg')",
+      }),
       colors: {
         synthgrape: {
           50: '#F4F1F8',
@@ -75,10 +78,10 @@ module.exports = {
         },
       },
       fontFamily: {
-        'header': 'Rosario, Arial, sans-serif',
-        'callout': 'Prompt, Arial, sans-serif',
-        'typeface': 'Nunito, serif',
-        'code': '"Overpass Mono", ui-monospace',
+        header: 'Rosario, Arial, sans-serif',
+        callout: 'Prompt, Arial, sans-serif',
+        typeface: 'Nunito, serif',
+        code: '"Overpass Mono", ui-monospace',
       },
     },
   },

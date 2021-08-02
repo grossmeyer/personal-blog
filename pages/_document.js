@@ -10,10 +10,14 @@ class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Overpass+Mono&family=Rosario&family=Prompt&display=swap" rel="stylesheet" />
+          <link rel='preconnect' href='https://fonts.gstatic.com' />
+          <link
+            href='https://fonts.googleapis.com/css2?family=Nunito&family=Overpass+Mono&family=Rosario&family=Prompt&display=swap'
+            rel='stylesheet'
+          />
+          <link rel='icon' href='/favicon.ico' />
         </Head>
-        <body className='container bg-synthgrape-700 w-auto'>
+        <body className='bg-synthgreen-900'>
           <Main />
           <NextScript />
         </body>
