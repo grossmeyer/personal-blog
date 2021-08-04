@@ -9,7 +9,7 @@ export default function MainLayout({ posts }) {
       <Navbar title='glennmeyer.dev' />
       <Header
         titleText={"Hi, I'm Glenn Meyer."}
-        subtitleText={"I'm a technology professional who loves to learn and write about programming."}
+        subtitleText={"I'm a technology professional who loves to learn and write about programming"}
       />
       <CardSection posts={posts} />
       <Footer />

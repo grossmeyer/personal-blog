@@ -10,13 +10,18 @@ export default function CardSection({ posts }) {
               <Card
                 key={index}
                 title={title}
-                link={`/posts/${slug.current}`}
+                link={`/posts/${slug.current.toLowerCase()}`}
                 previewText={previewText}
                 publishedAt={publishedAt}
                 categories={categories}
               ></Card>
             )
           })}
+        {posts.length === 0 && (
+          <main>
+            <h4 className='text-xl text-center text-synthgrape-50 font-callout mb-8 italic'>There are no posts here</h4>
+          </main>
+        )}
       </section>
     </main>
   )

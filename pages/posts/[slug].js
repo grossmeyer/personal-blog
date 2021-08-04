@@ -1,14 +1,17 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import imageUrlBuilder from '@sanity/image-url'
 import BlockContent from '@sanity/block-content-to-react'
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx'
 import java from 'react-syntax-highlighter/dist/cjs/languages/prism/java'
 import colddarkdark from 'react-syntax-highlighter/dist/cjs/styles/prism/coldark-dark'
+
 import sanityClient from '../../client'
 import Navbar from '../../components/Navbar'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import FancyLink from '../../components/FancyLink'
 
 const builder = imageUrlBuilder(sanityClient)
 const urlFor = source => builder.image(source)
@@ -24,14 +27,7 @@ const overrides = {
 const serializers = {
   marks: {
     link: props => {
-      return (
-        <a
-          href={props.mark.href}
-          className='no-underline text-synthgrape-800 font-callout italic bg-synthpink-200 rounded px-1 rounded-lg hover:underline'
-        >
-          {props.children}
-        </a>
-      )
+      return <FancyLink href={props.mark.href}>{props.children}</FancyLink>
     },
   },
   types: {
@@ -58,10 +54,10 @@ const Post = props => {
         </Header>
         <section className='flex flex-row justify-center space-x-4 text-sm uppercase my-2'>
           {categories &&
-            categories.map((category, index) => {
+            categories.map((category = '', index) => {
               return (
                 <a
-                  href={`/categories/${category}`}
+                  href={`/categories/${category.toLowerCase()}`}
                   key={index}
                   className='font-callout text-synthgrape-800 bg-synthpink-100 hover:bg-synthpink-200 px-2 py-1 rounded-lg'
                 >
@@ -86,12 +82,6 @@ export const getStaticProps = async context => {
     `*[_type == 'post' && slug.current == $slug]{
       title,
       slug,
-      mainImage{
-        asset->{
-          _id,
-          url
-        }
-      },
       body,
       'author': author->name,
       'authorImage': author->image,
@@ -112,7 +102,6 @@ export const getStaticProps = async context => {
     props: {
       title: post.title,
       slug: post.slug,
-      mainImage: post.mainImage,
       body: post.body,
       author: post.author,
       authorImage: post.authorImage,

@@ -5,12 +5,17 @@ export default function Navbar({ title = 'Default Page Title' }) {
     <>
       <title>{title}</title>
       <nav className='w-full py-4 bg-synthgreen-800 shadow-xl'>
-        <div className='container w-full md:w-2/3 lg:w-1/2 mx-auto flex flex-wrap items-center justify-between'>
-          <section>
+        <div className='container w-full md:w-2/3 lg:w-1/2 mx-auto flex flex-wrap flex-col md:flex-row items-center justify-between'>
+          <section className='md:mb-0 mb-4'>
             <ul className='flex items-center justify-between font-bold font-header text-sm'>
               <li>
                 <Link href='/'>
                   <a className='text-synthgrape-50 hover:text-synthpink-100 hover:underline px-4'>HOME</a>
+                </Link>
+              </li>
+              <li>
+                <Link href='/categories'>
+                  <a className='text-synthgrape-50 hover:text-synthpink-100 hover:underline px-4'>CATEGORIES</a>
                 </Link>
               </li>
               <li>

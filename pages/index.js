@@ -5,8 +5,8 @@ export default function Home({ posts }) {
   return <MainLayout posts={posts} />
 }
 
-export const getServerSideProps = async () => {
-  const apiResult = await sanityClient.fetch(`*[_type == "post"]{
+export const getStaticProps = async () => {
+  const posts = await sanityClient.fetch(`*[_type == "post"]{
     title,
     slug,
     'categories': categories[]->title,
@@ -14,7 +14,7 @@ export const getServerSideProps = async () => {
     publishedAt,
   }`)
 
-  if (!apiResult || !apiResult.length) {
+  if (!posts || !posts.length) {
     return {
       props: {
         posts: [],
@@ -23,7 +23,7 @@ export const getServerSideProps = async () => {
   } else {
     return {
       props: {
-        posts: apiResult,
+        posts,
       },
     }
   }

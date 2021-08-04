@@ -8,7 +8,7 @@ export default function Card({ title, link, categories, previewText = 'Default P
         {categories &&
           categories.map((category, index) => {
             return (
-              <Link href={`/categories/${category}`} key={index}>
+              <Link href={`/categories/${category.toString().toLowerCase()}`} key={index}>
                 <a className='font-callout text-synthgrape-800 bg-synthpink-100 hover:bg-synthpink-200 px-2 py-1 rounded-lg'>
                   {category}
                 </a>
