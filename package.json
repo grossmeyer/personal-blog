@@ -1,6 +1,8 @@
 {
   "name": "personal-blog",
   "version": "1.0.0",
+  "author": "Glenn Meyer",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
