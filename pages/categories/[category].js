@@ -8,7 +8,6 @@ const Category = props => {
   const category = props.posts[0].category
   const fullTitle = props.posts[0].fullTitle
   const posts = props.posts[0].posts
-  console.log(posts)
   return (
     <>
       <Navbar title={category} />
